@@ -1,0 +1,10 @@
+version: '3'
+services:
+  ca:
+    restart: always
+    build: ./CA
+    container_name: myCA
+    working_dir: '/root/'
+    tty: true
+    volumes:
+      - ./CA/workdir:/etc/pki
